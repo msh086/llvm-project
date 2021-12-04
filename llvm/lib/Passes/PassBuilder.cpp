@@ -237,6 +237,7 @@
 #include "llvm/Transforms/Vectorize/SLPVectorizer.h"
 #include "llvm/Transforms/Vectorize/VectorCombine.h"
 
+//#include "llvm/Transforms/SCA/Secret.h"
 using namespace llvm;
 
 extern cl::opt<unsigned> MaxDevirtIterations;

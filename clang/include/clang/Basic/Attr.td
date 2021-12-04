@@ -3684,3 +3684,11 @@ def EnforceTCBLeaf : InheritableAttr {
   let Documentation = [EnforceTCBLeafDocs];
   bit InheritEvenIfAlreadyPresent = 1;
 }
+
+// attribute to mark secret variable
+def Secret : Attr {
+    let Spellings = [Clang<"secret">];
+    let Subjects = SubjectList<[Var]>;
+    let Documentation = [Undocumented];
+    let SimpleHandler = 1;
+}
