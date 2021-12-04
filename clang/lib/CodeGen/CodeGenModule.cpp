@@ -1773,6 +1773,14 @@ void CodeGenModule::SetLLVMFunctionAttributesForDefinition(const Decl *D,
     if (D->hasAttr<MinSizeAttr>())
       B.addAttribute(llvm::Attribute::MinSize);
   }
+  
+  
+  // add secret attribute to function
+  if (auto *FD = dyn_cast<FunctionDecl>(D)) {
+    if (FD->hasAttr<SecretAttr>()) {
+      B.addAttribute(llvm::Attribute::Secret);
+    }
+  }
 
   F->addAttributes(llvm::AttributeList::FunctionIndex, B);
 

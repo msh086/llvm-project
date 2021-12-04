@@ -3688,7 +3688,7 @@ def EnforceTCBLeaf : InheritableAttr {
 // attribute to mark secret variable
 def Secret : Attr {
     let Spellings = [Clang<"secret">];
-    let Subjects = SubjectList<[Var]>;
+    let Subjects = SubjectList<[Function]>;
     let Documentation = [Undocumented];
     let SimpleHandler = 1;
 }

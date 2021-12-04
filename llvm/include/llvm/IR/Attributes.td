@@ -259,6 +259,9 @@ def ZExt : EnumAttr<"zeroext">;
 /// Function is required to make Forward Progress.
 def MustProgress : TypeAttr<"mustprogress">;
 
+// Mark secret variables
+def Secret : EnumAttr<"secret">;
+
 /// Target-independent string attributes.
 def LessPreciseFPMAD : StrBoolAttr<"less-precise-fpmad">;
 def NoInfsFPMath : StrBoolAttr<"no-infs-fp-math">;
