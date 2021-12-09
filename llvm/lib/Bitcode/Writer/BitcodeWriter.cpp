@@ -761,6 +761,8 @@ static uint64_t getAttrKindEncoding(Attribute::AttrKind Kind) {
   case Attribute::EmptyKey:
   case Attribute::TombstoneKey:
     llvm_unreachable("Trying to encode EmptyKey/TombstoneKey");
+  case Attribute::Secret:
+    return bitc::ATTR_KIND_SECRET;
   }
 
   llvm_unreachable("Trying to encode unknown attribute");

@@ -451,6 +451,7 @@ enum Kind {
   kw_byte,
   kw_bit,
   kw_varFlags,
+  kw_secret,
 
   // Unsigned Valued tokens (UIntVal).
   LabelID,    // 42:

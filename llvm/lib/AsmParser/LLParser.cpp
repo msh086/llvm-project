@@ -1440,6 +1440,9 @@ bool LLParser::parseFnAttributeValuePairs(AttrBuilder &B,
           error(Lex.getLoc(),
                 "invalid use of parameter-only attribute on a function");
       break;
+    case lltok::kw_secret:
+        B.addAttribute(Attribute::Secret);
+        break;
     }
 
     // parsePreallocated() consumes token

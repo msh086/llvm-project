@@ -256,6 +256,9 @@ def WriteOnly : EnumAttr<"writeonly">;
 /// Zero extended before/after call.
 def ZExt : EnumAttr<"zeroext">;
 
+/// secret attribute
+def Secret : EnumAttr<"secret">;
+
 /// Function is required to make Forward Progress.
 def MustProgress : TypeAttr<"mustprogress">;
 
